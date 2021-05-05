@@ -60,7 +60,7 @@ async def upload_to_tg(
 ):
     base_file_name = os.path.basename(local_file_name)
     caption_str = ""
-    caption_str += "</code>"
+    caption_str += "<code>"
     caption_str += base_file_name
     caption_str += "</code>"
     if os.path.isdir(local_file_name):
