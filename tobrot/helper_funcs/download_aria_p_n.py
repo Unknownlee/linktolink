@@ -277,22 +277,22 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                     pass
                 #
                 if is_file is None:
-                    msgg = f"☞Connections: {file.connections} <b>\n</b> ☞GID: <code>{gid}</code>"
+                    msgg = f"<b>☞Connections:</b> {file.connections} <b>\n</b> <b>☞GID:</b> <code>{gid}</code>"
                 else:
-                    msgg = f"☞P: {file.connections} |\n ☞S: {file.num_seeders} <b>|</b> \n☞GID: <code>{gid}</code>"
+                    msgg = f"<b>☞P:</b> {file.connections} \n <b>☞S:</b> {file.num_seeders} \n <b> ☞GID:</b> <code>{gid}</code>"
                 msg = f"\n`{downloading_dir_name}`"
                 msg += f"\n<b>☞Speed</b>: {file.download_speed_string()}"
                 msg += f"\n<b>☞Status</b>: {file.progress_string()} <b>of</b> {file.total_length_string()} <b>|</b> {file.eta_string()} <b>|</b> {msgg}"
-                # msg += f"\n☞Size: {file.total_length_string()}"
+                # msg += f"\n<b>☞Size:</b> {file.total_length_string()}"
 
                 # if is_file is None :
-                # msg += f"\n<b>☞Connections:</b> {file.connections}, \n ☞GID: <code>{gid}</code>"
+                # msg += f"\n<b>☞Connections:</b> {file.connections}, \n <b>☞GID:</b> <code>{gid}</code>"
                 # else :
-                # msg += f"\n<b>☞Info:</b> \n ☞<b>P :</b> {file.connections} \n ☞<b>S :</b> {file.num_seeders} , \n ☞<b>GID:</b> <code>{gid}</code>"
+                # msg += f"\n<b>☞Info:</b> \n <b>☞P :</b> {file.connections} \n <b>☞S :</b> {file.num_seeders} , \n <b>☞GID:</b> <code>{gid}</code>"
 
-                # msg += f"\n☞<b>Status:</b> {file.status}"
-                # msg += f"\n☞<b>ETA:</b> {file.eta_string()}"
-                # msg += f"\n☞<b>GID:</b> <code>{gid}</code>"
+                # msg += f"\n<b>☞Status:</b> {file.status}"
+                # msg += f"\n<b>☞ETA:</b> {file.eta_string()}"
+                # msg += f"\n<b>☞GID:</b> <code>{gid}</code>"
                 inline_keyboard = []
                 ikeyboard = []
                 ikeyboard.append(
